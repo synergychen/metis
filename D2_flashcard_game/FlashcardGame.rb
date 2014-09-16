@@ -1,3 +1,12 @@
+class Deck
+
+  attr_reader :name
+  
+  def initialize(name)
+    @name = name
+  end
+end
+
 class FlashcardGame
   def initialize(deck)
     @decks = deck
@@ -21,7 +30,7 @@ class FlashcardGame
   def list_decks
     puts "----------"
     @decks.each do |deck|
-      puts deck
+      puts deck.name
     end
   end
 
@@ -33,6 +42,8 @@ class FlashcardGame
   end
 end
 
-deck = ["Japanese", "Spanish"]
-game = FlashcardGame.new(deck)
+decks = []
+decks << Deck.new("Japanese")
+decks << Deck.new("Spanish")
+game = FlashcardGame.new(decks)
 game.play
