@@ -1,11 +1,11 @@
 class FlashcardGame
-  def initialize
-    puts "Welcome to Flashcard Game"
-    puts "(Spanish / Japanese / Press Enter to exit)"
+  def initialize(deck)
+    @decks = deck
   end
 
   def play
     loop do
+      list_decks
       deck = ask_user_which_deck
       if deck == ""
         puts "Exiting Game"
@@ -18,12 +18,21 @@ class FlashcardGame
 
   private
 
+  def list_decks
+    puts "----------"
+    @decks.each do |deck|
+      puts deck
+    end
+  end
+
   def ask_user_which_deck
+    print "Which deck would you like(leave blank to exit) > "
     deck = gets.chomp
     puts deck
     deck
   end
 end
 
-game = FlashcardGame.new
+deck = ["Japanese", "Spanish"]
+game = FlashcardGame.new(deck)
 game.play
