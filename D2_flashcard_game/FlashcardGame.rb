@@ -16,11 +16,11 @@ class FlashcardGame
     loop do
       list_decks
       deck = ask_user_which_deck
-      if deck == ""
+      if deck
+        puts "Would play"
+      else
         puts "Exiting Game"
         break
-      else
-        puts "would play"
       end
     end
   end
@@ -36,9 +36,8 @@ class FlashcardGame
 
   def ask_user_which_deck
     print "Which deck would you like(leave blank to exit) > "
-    deck = gets.chomp
-    puts deck
-    deck
+    request_deck = gets.chomp
+    @decks.find { |deck| deck.name == request_deck }
   end
 end
 
