@@ -14,6 +14,8 @@ class OldestAndYoungestPerson
     print_oldest_and_youngest
   end
 
+  private
+
   def input_series_of_names_and_ages
     puts "Enter people's names and ages followed by an empty line:"
     loop do
