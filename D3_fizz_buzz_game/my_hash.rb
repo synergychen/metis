@@ -15,3 +15,4 @@ end
 
 myhash = MyHash.new
 puts "Chen's age is #{myhash["Chen"]}"
+
