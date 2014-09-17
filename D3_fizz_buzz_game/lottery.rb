@@ -26,7 +26,7 @@ class Lottery
   end
 
   def random_pick_name
-    puts "#{@name_list[rand(@name_list.length)]} wins!"
+    puts "#{@name_list.sample} wins!"
   end
 end
 
