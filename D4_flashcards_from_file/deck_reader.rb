@@ -18,10 +18,10 @@ class DeckReader
   def read_deck
     name = get_line
     number_of_card = get_line.to_i
-    number_of_card.times.map do
-      cards = read_card
-      Deck.new({ name: name, cards: cards})
+    cards = number_of_card.times.map do
+      read_card
     end
+    Deck.new({ name: name, cards: cards})
   end
 
   def read_card
