@@ -13,6 +13,8 @@ class EvenFibonacciNumbers
     print_sum_of_even_fibs
   end
 
+  private
+
   def get_all_fib_list
     @fib_list_all = [1, 2]
     generate_fib
