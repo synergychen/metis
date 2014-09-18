@@ -34,8 +34,3 @@ class DeckReader
     @file.gets.chomp
   end
 end
-
-deck_reader = DeckReader.new("decks.txt")
-decks = deck_reader.get_decks
-puts decks.length
-puts decks.inspect
