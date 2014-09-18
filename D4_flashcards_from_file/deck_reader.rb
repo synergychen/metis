@@ -7,7 +7,7 @@ class DeckReader
     @number_of_decks = get_line.to_i
   end
 
-  def run
+  def get_decks
     @number_of_decks.times.map do
       read_deck
     end
@@ -36,6 +36,6 @@ class DeckReader
 end
 
 deck_reader = DeckReader.new("decks.txt")
-decks = deck_reader.run
+decks = deck_reader.get_decks
 puts decks.length
 puts decks.inspect
